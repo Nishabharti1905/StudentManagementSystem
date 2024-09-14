@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% block title %}
+  Add Student
+{% endblock %}
+
+{% block content %}
+<div>
+    <h2> Enter Student Details Here </h2>
+    <form action="" method="post">
+        {% csrf_token %}
+
+    Name<input type="text" name="tbname" class="form-control" placeholder="enter your name"/><br/>
+    Age<input type="text" name="tbage" class="form-control" placeholder= "enter your age"/><br/>
+    City<input type="text" name="tbcity" class="form-control" placeholder="enter your city"/><br/>
+    Email<input type="text" name="tbemail" class="form-control" placeholder="enter your email"/><br/>
+    Phone<input type="text" name="tbphone" class="form-control" placeholder="enter your phone"/><br/>
+    <input class=" btn btn-success form-control" type="submit" value="Add Student"  /><br/>
+
+{% endblock %}
+    </form>
+</div>

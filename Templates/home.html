@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %}
+    HomePage
+{% endblock %}
+
+{% block content %}
+<div class="container" align="center">
+<div class="card" style="width: 40rem;">
+  <img src="{% static 'images/img2.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Student Management System</h5>
+    <p class="card-text">Manage the students Infromations</p>
+     {% if request.session.name %}
+    <a href="{% url 'addstudent' %}" class="btn btn-outline-success">Add Student </a>
+    {% endif %}
+    <a href="{% url 'displaystudents' %}" class="btn btn-outline-info"> Display Students </a>
+  </div>
+</div>
+</div>
+{% endblock %}
